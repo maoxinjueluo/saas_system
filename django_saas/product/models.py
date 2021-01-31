@@ -477,8 +477,8 @@ class GoodsUnit(models.Model):
     store_id = models.PositiveIntegerField()
     unit = models.CharField(max_length=5)
     state = models.IntegerField()
-    create_time = models.DateTimeField()
-    update_time = models.DateTimeField()
+    create_time = models.DateTimeField(auto_now_add=True)
+    update_time = models.DateTimeField(auto_now=True)
 
     class Meta:
         managed = False
